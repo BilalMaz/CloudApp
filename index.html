@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beautiful Basic Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent-a: #7c3aed;
+      --accent-b: #06b6d4;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071021 0%, #081426 50%, #071021 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:40px 20px;
+    }
+    .container{max-width:1000px;margin:0 auto}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent-a),var(--accent-b));display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:18px}
+    a.navlink{color:var(--muted);text-decoration:none;font-weight:600}
+    a.cta{background:linear-gradient(90deg,var(--accent-a),var(--accent-b));padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:600}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:28px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:16px;backdrop-filter:blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    h1{font-size:28px;margin:0 0 8px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .buttons{display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:inherit;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent-a),var(--accent-b));color:white;border:none}
+
+    /* features */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .feature{background:var(--card);padding:16px;border-radius:12px}
+    .feature h3{margin:0 0 6px;font-size:16px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* little card on right */
+    .summary{padding:20px;border-radius:12px;background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));}
+    .summary h4{margin:0 0 8px}
+    .kpi{display:flex;justify-content:space-between;margin-top:12px}
+    .kpi div{font-weight:700}
+
+    footer{margin-top:44px;color:var(--muted);text-align:center;font-size:14px}
+
+    /* responsiveness */
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      header{flex-direction:column;align-items:flex-start;gap:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">B</div>
+        <div>
+          <div style="font-weight:700">BrightPage</div>
+          <div style="font-size:12px;color:var(--muted)">simple · modern · responsive</div>
+        </div>
+      </div>
+      <nav>
+        <a class="navlink" href="#">Features</a>
+        <a class="navlink" href="#">Pricing</a>
+        <a class="navlink" href="#">Contact</a>
+        <a class="cta" href="#">Get Started</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Beautiful, minimal HTML page</h1>
+        <p class="lead">A clean starter template that you can customize — responsive layout, soft glass cards, and a friendly color palette.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#">Download</a>
+          <a class="btn" href="#">Learn more</a>
+        </div>
+
+        <div class="grid">
+          <div class="feature">
+            <h3>Responsive</h3>
+            <p>Works beautifully on phones, tablets, and desktops.</p>
+          </div>
+          <div class="feature">
+            <h3>Accessible</h3>
+            <p>Clear contrast and scalable text sizes for better readability.</p>
+          </div>
+          <div class="feature">
+            <h3>Customizable</h3>
+            <p>Easy to adapt to your brand — change colors, fonts, and content.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="summary">
+        <h4>Quick summary</h4>
+        <p style="color:var(--muted);margin:0">Use this template to kickstart a landing page, a portfolio, or a small product site. Copy the HTML and adapt the styles below.</p>
+        <div class="kpi">
+          <div>
+            <div style="font-size:18px">1.2K</div>
+            <div style="font-size:12px;color:var(--muted)">Users</div>
+          </div>
+          <div>
+            <div style="font-size:18px">98%</div>
+            <div style="font-size:12px;color:var(--muted)">Satisfaction</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> BrightPage — Crafted with care. &nbsp;·&nbsp; Made for learning and quick prototypes.
+    </footer>
+  </div>
+
+  <script>
+    // small script for dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
